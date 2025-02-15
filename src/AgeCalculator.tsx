@@ -6,7 +6,7 @@ export default function AgeCalculator() {
   const [birthYear, setBirthYear] = useState(0);
   const [age, setAge] = useState(0);
 
-  const handleChange = (e: ChangeEvent<HTMLSelectElement>) => {
+  const handleChange = (e: ChangeEvent<HTMLInputElement>) => {
     const value = e.target.value;
     setBirthYear(parseInt(value));
     setAge(new AgeFromDateString(value + '-1-1').age);
